@@ -35,15 +35,23 @@ class Solution:
         return max_distance
 
 
+solution = Solution()
+
 # input
 A = [1, 2, 4, 3, 2, 2, 2]
 print('***input***')
 print(A)
 
-solution = Solution()
 output = solution.bi_valued(A)
 
 print('***output***')
 print(output)
 
+# input
+A = [1,3,3,3,4,4,4,4]
+print('***input***')
+print(A)
 
+output = solution.bi_valued(A)
+print('***output***')
+print(output)
