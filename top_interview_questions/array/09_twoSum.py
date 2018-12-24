@@ -9,16 +9,16 @@ class Solution:
         :rtype: List[int]
         """
         len_nums = len(nums)
-
+        index_dict = {}
         if len_nums is 2:
             return [0, 1]
 
-        for i in range(len_nums):
-            temp = target - nums[i]
-            sub_nums = nums[i + 1:]
-            if temp in sub_nums:
-                j = sub_nums.index(temp)
-                return [i, i + j + 1]
+        for index, num in enumerate(nums):
+            temp = target - num
+            if temp in index_dict:
+                return [index_dict[temp], index]
+            else:
+                index_dict[num] = index
 
 
 # input
