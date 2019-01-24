@@ -10,9 +10,9 @@ class Solution:
         """
         distanceDict = {}
         distanceList = []
-        for x in points:
-            u = x[0]**2 + x[1]**2
-            distanceDict[u] = x
+        for point in points:
+            u = point[0]**2 + point[1]**2
+            distanceDict[u] = point
             distanceList.append(u)
         distanceList.sort()
         return [distanceDict[ distanceList[i] ] for i in range(K)]
