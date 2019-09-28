@@ -1,8 +1,6 @@
 n, m = (int(i) for i in input().split())
 ab = [[int(i) for i in input().split()] for i in range(n)]
 
-print(ab)
-
 for i in range(n):
     start = ab[i]
     yes = True
